@@ -1,0 +1,24 @@
+<div class="p-2">
+  <div
+    class="flex sm:grid overflow-y-hidden w-full relative h-full min-h-full gap-2"
+    [ngClass]="
+      layoutService.isDetailOpened() ? 'sidebars-layout' : 'left-sidebar-layout'
+    "
+  >
+    <app-left-sidebar
+      class="left-sidebar bg-background hidden sm:block sm:w-left-sidebar h-content relative rounded-md"
+    />
+    <app-main-view
+      class="main-view relative w-full bg-background p-2 rounded-md h-content overflow-y-auto"
+    />
+
+    @if (layoutService.isDetailOpened()) {
+      <app-right-sidebar
+        class="hidden lg:block right-sidebar bg-background h-content w-right-sidebar rounded-md"
+      />
+    }
+  </div>
+  <app-playing-bar
+    class="relative w-full h-playing-bar block bg-background rounded-md mt-2 sm:mt-0"
+  />
+</div>

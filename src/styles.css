@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --panel-gap: 8px;
+  --left-sidebar-width: 280px;
+  --right-sidebar-width: 256px;
+  --playing-bar-height: 100px;
+  --content-height: calc(100vh - var(--playing-bar-height) - (var(--panel-gap) * 3));
+  --primary: 31, 223, 100;
+  --primary-foreground: 0, 0, 0;
+  --background: 18, 18, 18;
+  --background-elevated: 36, 36, 36;
+  --background-card: 40, 40, 40;
+  --accent: 26, 26, 26;
+  --muted: 179, 179, 179;
+}
+
 html {
   font-family: "CircularStd", system-ui, sans-serif;
   background: #000;
   color: #fff;
-  --left-sidebar-width: 280px;
 }
 
 @font-face {
@@ -47,4 +61,38 @@ html {
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+}
+
+.left-sidebar-layout {
+  grid-template-areas:
+    "left-sidebar main-view";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.sidebars-layout {
+  grid-template-areas:
+    "left-sidebar main-view right-sidebar";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+}
+
+.main-view {
+  grid-area: main-view;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
 }
