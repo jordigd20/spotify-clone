@@ -11,7 +11,8 @@ module.exports = {
         xxxs: "320px",
       },
       gridTemplateColumns: {
-        'auto-fill': 'repeat(auto-fill, minmax(max(250px, 25%), 1fr))'
+        'auto-fill': 'repeat(auto-fill, minmax(max(250px, 25%), 1fr))',
+        'auto-fill-cards': 'repeat(auto-fill, minmax(max(180px, 10%), 1fr))'
       },
       width: {
         'left-sidebar': 'var(--left-sidebar-width)',
@@ -30,6 +31,8 @@ module.exports = {
           DEFAULT: 'rgb(var(--background))',
           elevated: 'rgb(var(--background-elevated))',
           card: 'rgb(var(--background-card))',
+          tinted: 'rgba(var(--background-tinted))',
+          'tinted-highlight': 'rgba(var(--background-tinted-highlight))',
         },
         accent: 'rgb(var(--accent))',
         muted: 'rgb(var(--muted))',
