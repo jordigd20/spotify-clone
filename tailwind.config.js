@@ -21,6 +21,7 @@ module.exports = {
       height: {
         'content': 'var(--content-height)',
         'playing-bar': 'var(--playing-bar-height)',
+        'left-sidebar-scroll': 'var(--sidebar-scroll-height)',
       },
       colors: {
         primary: {
