@@ -58,14 +58,16 @@
     <div class="pl-3 overflow-y-scroll h-left-sidebar-scroll">
       @for (playlist of playlists; track playlist.id; let even = $even) {
         <a
-          class="p-2 flex items-center gap-2 rounded-md bg-background hover:bg-background-card"
-          [routerLink]="['/']"
+          class="p-2 flex items-center gap-2 rounded-md bg-background hover:bg-background-card transition-colors duration-100"
+          [routerLink]="['/playlist', playlist.id]"
         >
-          <img
-            class="w-14 h-14 rounded-sm object-cover"
-            [src]="playlist.cover"
-            [alt]="'Cover of' + playlist.title + 'playlist'"
-          />
+          <picture class="w-14 h-14 aspect-square">
+            <img
+              class="w-full h-full rounded-sm object-cover"
+              [src]="playlist.cover"
+              [alt]="'Cover of' + playlist.title + 'playlist'"
+            />
+          </picture>
 
           <div class="flex items-center justify-between gap-1 w-full">
             <div class="pr-1">

@@ -3,7 +3,7 @@
   style="background-color: {{ gradientColor() }}"
 >
   <header
-    class="px-4 relative h-12 w-full flex items-center justify-end gap-2 py-2"
+    class="px-4 relative h-16 w-full flex items-center justify-end gap-2 py-4"
   >
     <!--FIXME: Just for testing -->
     <button (click)="layoutService.toggleDetail()">Toggle</button>
@@ -14,7 +14,8 @@
     >
       <svg
         role="img"
-        width="22"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -36,17 +37,27 @@
           (mouseenter)="onPlaylistHover(playlist)"
           (mouseleave)="onPlaylistHover(null)"
         >
-          <a [routerLink]="['/']" class="flex items-center w-full gap-2">
-            <img
-              class="w-[4.5rem] h-[4.5rem] rounded-l-md object-cover"
-              [src]="playlist.cover"
-              [alt]="'Cover of' + playlist.title + 'playlist'"
-            />
+          <a
+            [routerLink]="['/playlist', playlist.id]"
+            class="flex items-center w-full gap-2"
+          >
+            <div class="aspect-square w-[4.5rem] h-[4.5rem]">
+              <img
+                class="w-full h-full rounded-l-md object-cover"
+                [src]="playlist.cover"
+                [alt]="'Cover of' + playlist.title + 'playlist'"
+                style="view-transition-name: cover-{{ playlist.id }}"
+              />
+            </div>
 
             <div
               class="inline-flex items-center justify-between gap-2 h-full w-full"
             >
-              <span class="font-bold">{{ playlist.title }}</span>
+              <span
+                class="font-bold"
+                style="view-transition-name: title-{{ playlist.id }}"
+                >{{ playlist.title }}</span
+              >
             </div>
           </a>
 
@@ -75,17 +86,23 @@
         <article
           class="group relative bg-background-elevated rounded-md hover:bg-background-card transition-colors shadow-xl"
         >
-          <a routerLink="/" class="block p-4 h-full">
+          <a [routerLink]="['/playlist', playlist.id]" class="block p-4 h-full">
             <div class="aspect-square">
               <img
                 class="w-full h-full rounded-md object-cover"
                 [src]="playlist.cover"
                 [alt]="'Cover of' + playlist.title + 'playlist'"
+                style="view-transition-name: cover-{{ playlist.id }}"
               />
             </div>
 
             <div class="py-2 space-y-1">
-              <h3 class="font-bold">{{ playlist.title }}</h3>
+              <h3
+                class="font-bold"
+                style="view-transition-name: title-{{ playlist.id }}"
+              >
+                {{ playlist.title }}
+              </h3>
               <p class="text-muted text-sm line-clamp-2">
                 {{ playlist.artists.join(", ") }}
               </p>

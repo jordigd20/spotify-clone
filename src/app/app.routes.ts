@@ -7,4 +7,16 @@ export const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full',
   },
+  {
+    path: 'playlist/:id',
+    loadComponent: () =>
+      import('./pages/playlist/playlist.component').then(
+        (m) => m.PlaylistComponent,
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: '/',
+    pathMatch: 'full',
+  }
 ];

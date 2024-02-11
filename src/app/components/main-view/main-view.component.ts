@@ -44,6 +44,6 @@ export class MainViewComponent {
       return;
     }
 
-    this.gradientColor.set(playlist.color.accent);
+    this.gradientColor.set(playlist.color.hex);
   }
 }

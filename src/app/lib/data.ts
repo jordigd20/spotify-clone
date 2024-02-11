@@ -1,13 +1,13 @@
 import { colors } from './colors';
 
 export interface Playlist {
-  id: string;
-  albumId: number;
+  id: number;
   title: string;
   color: (typeof colors)[keyof typeof colors];
   cover: string;
   artists: string[];
   time: string;
+  likes: number;
 }
 
 export interface Artist {
@@ -20,129 +20,132 @@ export interface Artist {
 
 export interface Song {
   id: number;
-  albumId: number;
+  playlistId: number;
   title: string;
   image: string;
-  artists: Artist[];
+  creator: Artist;
+  artists: string[];
   album: string;
   duration: string;
 }
 
 export const playlists: Playlist[] = [
   {
-    id: '1',
-    albumId: 1,
+    id: 1,
     title: 'Rock Classics',
-    color: colors.red,
+    color: colors.green,
     cover:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220626/spotify-clone/playlists/zujap2uzlimkqzd1ohh7.webp',
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707573243/spotify-clone/playlists/inlfzxzrympwz6rg4tpg.webp',
     artists: ['Bon Jovi', 'AC/DC', 'Queen'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '2',
-    albumId: 2,
+    id: 2,
     title: 'Viva Latino',
-    color: colors.purple,
+    color: colors.yellow,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220626/spotify-clone/playlists/yciffnsphjo2y80qd5lu.webp',
     artists: ['J Balvin', 'Bad Bunny', 'Maluma', 'Peso Pluma'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '3',
-    albumId: 3,
+    id: 3,
     title: 'Pop Hits',
-    color: colors.blue,
+    color: colors.fiord,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220626/spotify-clone/playlists/qbj6hkxwnxdaygdv9blx.webp',
     artists: ['Dua Lipa', 'Ariana Grande', 'Justin Bieber'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '4',
-    albumId: 4,
-    title: "Hip Hop 90's & 2000's - Classics",
+    id: 4,
+    title: "Hip Hop 90's & 2000's",
     color: colors.blue,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/jiql4ig7hjzn0f7iylmr.webp',
     artists: ['Eminem', '50 Cent', 'Snoop Dogg', 'Dr. Dre'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '5',
-    albumId: 5,
+    id: 5,
     title: 'Electronic Dance',
-    color: colors.blue,
+    color: colors.darkblue,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ukj1fguapq8lszujozms.webp',
     artists: ['David Guetta', 'Avicii', 'TWENTY SIX', 'BENNETT'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '6',
-    albumId: 6,
+    id: 6,
     title: 'Lofi Beats',
     color: colors.pink,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/h0xxlzdfm3nf0y1d5rzl.webp',
     artists: ['nrg', 'Wun Two', 'Clloinsworthy', 'Aurora 10'],
     time: '3h 15m',
+    likes: 12001654,
   },
 ];
 
 export const morePlaylists: Playlist[] = [
   {
-    id: '7',
-    albumId: 7,
+    id: 7,
     title: 'Essential Indie',
     color: colors.yellow,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ffjxma92cgibpz9gewww.webp',
     artists: ['Dijon', 'Beach House', 'Clairo', 'Phoebe Bridgers'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '8',
-    albumId: 8,
+    id: 8,
     title: 'Classical Essentials',
     color: colors.indigo,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ijo477nl97rgimrntf9t.webp',
     artists: ['Johann Sebastian Bach', 'Ludwig van Beethoven', 'Yo-Yo Ma'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '9',
-    albumId: 9,
+    id: 9,
     title: 'Soul Blues',
     color: colors.gray,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/i4prkpvee6mpzdllyktt.webp',
     artists: ['Joe Louis Walker', 'Solomon Burke', 'Jade Macrae'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '10',
-    albumId: 10,
+    id: 10,
     title: "Today's Top Hits",
     color: colors.red,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ijeo71h7pkczvdxokdby.webp',
     artists: ['Jack Harlow', 'Ariana Grande', 'SZA'],
     time: '3h 15m',
+    likes: 12001654,
   },
   {
-    id: '11',
-    albumId: 11,
+    id: 11,
     title: "Today's Top Hits",
     color: colors.yellow,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220624/spotify-clone/playlists/k8vopi9ysvqud5izwvgu.webp',
     artists: ['Eminem', 'Wu-Tang Clan', 'Big Tymers'],
     time: '3h 15m',
+    likes: 12001654,
   },
 ];
+
+export const allPlaylists = [...playlists, ...morePlaylists];
 
 export const artists: Artist[] = [
   {
@@ -273,164 +276,180 @@ export const artists: Artist[] = [
   },
 ];
 
-const songs: Song[] = [
+export const songs: Song[] = [
   {
     id: 1,
-    albumId: 1,
+    playlistId: 1,
     title: 'Runaway',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220841/spotify-clone/songs/txgl3slvmqgbsgakjfkb.webp',
-    artists: [artists[0]],
+    creator: artists[0],
+    artists: ['Bon Jovi'],
     album: 'Bon Jovi',
     duration: '3:51',
   },
   {
     id: 2,
-    albumId: 2,
+    playlistId: 1,
     title: 'Thunderstruck',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220841/spotify-clone/songs/txgl3slvmqgbsgakjfkb.webp',
-    artists: [artists[1]],
+    creator: artists[1],
+    artists: ['AC/DC'],
     album: 'The Razors Edge',
     duration: '4:52',
   },
   {
     id: 3,
-    albumId: 3,
+    playlistId: 1,
     title: 'Bohemian Rhapsody',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221036/spotify-clone/songs/dgxyyi8isxkqsajfyrzo.webp',
-    artists: [artists[2]],
+    creator: artists[2],
+    artists: ['Queen'],
     album: 'A Night At The Opera',
     duration: '5:54',
   },
   {
     id: 4,
-    albumId: 4,
+    playlistId: 1,
     title: 'Dream On',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221136/spotify-clone/songs/d86jnm7odfnoglvqtdii.webp',
-    artists: [artists[3]],
+    creator: artists[3],
+    artists: ['Aerosmith'],
     album: 'Aerosmith',
     duration: '5:54',
   },
   {
     id: 5,
-    albumId: 5,
+    playlistId: 1,
     title: 'Californication',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221239/spotify-clone/songs/o1kpplxbgjn8nmwwpnzb.webp',
-    artists: [artists[4]],
+    creator: artists[4],
+    artists: ['Red Hot Chilli Peppers'],
     album: 'Californication',
     duration: '5:29',
   },
   {
     id: 6,
-    albumId: 6,
+    playlistId: 1,
     title: 'Come As You Are',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221308/spotify-clone/songs/dbtifmdsaciwnrarw9n4.webp',
-    artists: [artists[5]],
+    creator: artists[5],
+    artists: ['Nirvana'],
     album: 'Nevermind',
     duration: '3:38',
   },
   {
     id: 7,
-    albumId: 7,
+    playlistId: 1,
     title: "Sweet Child O' Mine",
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221365/spotify-clone/songs/dumsgm0updxupaovhxxt.webp',
-    artists: [artists[6]],
+    creator: artists[6],
+    artists: ["Guns N' Roses"],
     album: 'Appetite For Destruction',
     duration: '5:56',
   },
   {
     id: 8,
-    albumId: 8,
+    playlistId: 1,
     title: 'Enter Sandman',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221502/spotify-clone/songs/m3kwrqhspqtaixwhydtk.webp',
-    artists: [artists[7]],
+    creator: artists[7],
+    artists: ['Metallica'],
     album: 'Metallica',
     duration: '5:56',
   },
   {
     id: 9,
-    albumId: 9,
+    playlistId: 1,
     title: "Livin' On A Prayer",
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221561/spotify-clone/songs/mvzomfdibazjxumfl7od.webp',
-    artists: [artists[0]],
+    creator: artists[0],
+    artists: ['Bon Jovi'],
     album: 'Slippery When Wet',
     duration: '4:09',
   },
   {
     id: 10,
-    albumId: 10,
+    playlistId: 1,
     title: 'Under the Bridge',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221699/spotify-clone/songs/u7zes52ycrhkkf1ahu5s.webp',
-    artists: [artists[4]],
+    creator: artists[4],
+    artists: ['Red Hot Chilli Peppers'],
     album: 'Blood Sugar',
     duration: '4:24',
   },
   {
     id: 11,
-    albumId: 11,
+    playlistId: 2,
     title: 'BELLAKEO',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707240758/spotify-clone/songs/nayihpg4ewg97aiqig1d.webp',
-    artists: [artists[8]],
+    creator: artists[8],
+    artists: ['Peso Pluma', 'Anitta'],
     album: 'BELLAKEO',
     duration: '3:17',
   },
   {
     id: 12,
-    albumId: 12,
+    playlistId: 2,
     title: 'PERREO NEGRO',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707240873/spotify-clone/songs/ftnxttvw8wx8tyi4qfav.webp',
-    artists: [artists[9]],
+    creator: artists[9],
+    artists: ['Bad Bunny', 'Feid'],
     album: 'nadie sabe lo que va a pasar mañana',
     duration: '2:42',
   },
   {
     id: 13,
-    albumId: 13,
+    playlistId: 2,
     title: 'Young Miko: Bzrp Music Sessions, Vol. 58',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707241024/spotify-clone/songs/nqbhgog87mpsmwke8k3j.webp',
-    artists: [artists[10]],
+    creator: artists[10],
+    artists: ['Bizarrap', 'Young Miko'],
     album: 'Young Miko: Bzrp Music Sessions, Vol. 58',
     duration: '3:07',
   },
   {
     id: 14,
-    albumId: 14,
+    playlistId: 2,
     title: 'QLONA',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707241096/spotify-clone/songs/idfzssclqy8lyuj5aqwj.webp',
-    artists: [artists[11]],
+    creator: artists[11],
+    artists: ['Karol G', 'Peso Pluma'],
     album: 'MAÑANA SERÁ BONITO',
     duration: '2:52',
   },
   {
     id: 15,
-    albumId: 15,
+    playlistId: 2,
     title: 'La_Original.mp3',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707241483/spotify-clone/songs/lvs8aotz6faaihf9nomf.webp',
-    artists: [artists[12]],
+    creator: artists[12],
+    artists: ['Emilia', 'Tini'],
     album: 'La_Original.mp3',
     duration: '2:20',
   },
   {
     id: 16,
-    albumId: 16,
+    playlistId: 2,
     title: 'LUNA',
     image:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707241320/spotify-clone/songs/g7zlevfi1abl4m50nrno.webp',
-    artists: [artists[13]],
+    creator: artists[13],
+    artists: ['Feid', 'ATL Jacob'],
     album: 'FERXXOCALIPSIS',
     duration: '3:16',
   },
