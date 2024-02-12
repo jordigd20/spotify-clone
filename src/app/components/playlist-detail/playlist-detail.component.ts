@@ -6,7 +6,6 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { LayoutService } from '../../services/layout.service';
 import { Playlist, Song, allPlaylists, songs } from '../../lib/data';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule, Location } from '@angular/common';
@@ -23,7 +22,6 @@ export class PlaylistDetailComponent {
   @ViewChild('headerContainer', { static: true })
   headerContainer!: ElementRef<HTMLDivElement>;
 
-  layoutService = inject(LayoutService);
   activeRoute = inject(ActivatedRoute);
   router = inject(Router);
   location = inject(Location);

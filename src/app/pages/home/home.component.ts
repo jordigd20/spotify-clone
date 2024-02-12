@@ -3,7 +3,7 @@ import { LeftSidebarComponent } from '../../components/left-sidebar/left-sidebar
 import { MainViewComponent } from '../../components/main-view/main-view.component';
 import { RightSidebarComponent } from '../../components/right-sidebar/right-sidebar.component';
 import { PlayingBarComponent } from '../../components/playing-bar/playing-bar.component';
-import { LayoutService } from '../../services/layout.service';
+import { DetailSongService } from '../../services/detail-song.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -20,5 +20,5 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  layoutService = inject(LayoutService);
+  detailSong = inject(DetailSongService);
 }

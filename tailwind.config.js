@@ -16,7 +16,6 @@ module.exports = {
       },
       width: {
         'left-sidebar': 'var(--left-sidebar-width)',
-        'right-sidebar': 'var(--right-sidebar-width)',
         'playlist-image-fluid': 'var(--playlist-image-fluid)',
       },
       height: {

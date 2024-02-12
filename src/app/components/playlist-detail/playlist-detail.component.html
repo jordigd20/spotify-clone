@@ -1,6 +1,6 @@
 <header
   class="transition-colors"
-  style="background-color: rgba({{ bgColor() }}, 0.3)"
+  style="background-color: rgba({{ bgColor() }}, 0.5)"
   #headerContainer
 >
   <div
@@ -24,9 +24,7 @@
         ></path>
       </svg>
     </button>
-    <!--FIXME: Just for testing -->
     <div class="flex items-center gap-2">
-      <button (click)="layoutService.toggleDetail()">Toggle</button>
       <a
         class="text-white/85 hover:text-white transition-colors"
         href="https://github.com/jordigd20/spotify-clone"
@@ -89,10 +87,11 @@
   </div>
 </header>
 
-<main class="py-4 px-6 bg-background/50">
+<main class="py-4 px-6">
   <header class="py-2 mb-2 flex items-center gap-8">
     <button
       class="rounded-full bg-primary p-4 text-primary-foreground shadow-xl transition-all duration-300 scale-100 hover:scale-110"
+      [attr.aria-label]="'Play ' + playlist()?.title + ' playlist'"
     >
       <svg width="24" height="24" viewBox="0 0 16 16">
         <path

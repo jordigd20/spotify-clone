@@ -1,7 +1,7 @@
 <div
   class="px-2 pt-2 flex sm:grid overflow-y-hidden w-full relative h-full min-h-full gap-2"
   [ngClass]="
-    layoutService.isDetailOpened() ? 'sidebars-layout' : 'left-sidebar-layout'
+    detailSong.isDetailOpened() ? 'sidebars-layout' : 'left-sidebar-layout'
   "
 >
   <app-left-sidebar
@@ -11,9 +11,9 @@
     class="main-view relative w-full bg-background rounded-md h-content overflow-y-auto"
   />
 
-  @if (layoutService.isDetailOpened()) {
+  @if (detailSong.isDetailOpened()) {
     <app-right-sidebar
-      class="hidden lg:block right-sidebar bg-background h-content w-right-sidebar rounded-md"
+      class="hidden lg:block relative right-sidebar bg-background h-content w-[280px] xl:w-[320px] rounded-md"
     />
   }
 </div>

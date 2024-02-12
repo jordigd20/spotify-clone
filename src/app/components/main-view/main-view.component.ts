@@ -1,25 +1,19 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  signal,
-} from '@angular/core';
-import { LayoutService } from '../../services/layout.service';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { Playlist, playlists, morePlaylists } from '../../lib/data';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { PlaylistCardComponent } from '../playlist-card/playlist-card.component';
 
 const DEFAULT_COLOR = '#0f6f32';
 
 @Component({
   selector: 'app-main-view',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, PlaylistCardComponent],
   templateUrl: './main-view.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainViewComponent {
-  layoutService = inject(LayoutService);
   playlists: Playlist[] = playlists;
   madeForYou: Playlist[] = morePlaylists;
   gradientColor = signal(DEFAULT_COLOR);

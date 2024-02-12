@@ -53,8 +53,9 @@
             <div class="flex flex-col spcae-y-1 self-start">
               <span
                 role="button"
-                aria-label=""
+                [attr.aria-label]="'Open ' + song.title + ' detail'"
                 class="text-base hover:underline line-clamp-1"
+                (click)="detailSong.openDetail(song)"
               >
                 {{ song.title }}
               </span>

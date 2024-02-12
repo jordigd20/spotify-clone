@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { LeftSidebarComponent } from '../../components/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from '../../components/right-sidebar/right-sidebar.component';
 import { PlayingBarComponent } from '../../components/playing-bar/playing-bar.component';
-import { LayoutService } from '../../services/layout.service';
+import { DetailSongService } from '../../services/detail-song.service';
 import { PlaylistDetailComponent } from '../../components/playlist-detail/playlist-detail.component';
 
 @Component({
@@ -20,5 +20,5 @@ import { PlaylistDetailComponent } from '../../components/playlist-detail/playli
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlaylistComponent {
-  layoutService = inject(LayoutService);
+  detailSong = inject(DetailSongService);
 }

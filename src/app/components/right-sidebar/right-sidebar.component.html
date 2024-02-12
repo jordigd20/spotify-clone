@@ -1,1 +1,65 @@
-<p>right sidebar works!</p>
+<div class="p-4 space-y-4">
+  <button
+    class="group absolute right-2 top-2 p-2 bg-background rounded-full hover:bg-background-card"
+    aria-label="Close detail"
+    (click)="detailSong.closeDetail()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      class="text-muted group-hover:text-white transition-colors"
+    >
+      <path
+        fill="currentColor"
+        d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z"
+      ></path>
+    </svg>
+  </button>
+
+  <div class="pt-4 aspect-square">
+    <img
+      class="w-full h-full object-cover rounded-md"
+      [src]="detailSong.songSelected()?.image"
+      [alt]="'Cover of ' + detailSong.songSelected()?.title + ' song'"
+    />
+  </div>
+
+  <div>
+    <h4 class="text-2xl font-bold line-clamp-2">
+      {{ detailSong.songSelected()?.title | titlecase }}
+    </h4>
+    <span class="text-muted line-clamp-1">
+      {{ detailSong.songSelected()?.artists!.join(", ") }}
+    </span>
+  </div>
+
+  <div class="bg-background-card rounded-md shadow-xl">
+    <div class="relative w-full h-40">
+      <div
+        class="absolute top-0 w-full h-full bg-gradient-to-b from-background/60 to-transparent"
+      >
+        <span class="absolute top-3 left-4 font-bold">About the artist</span>
+      </div>
+
+      <img
+        class="w-full h-full object-cover rounded-t-md"
+        [src]="detailSong.songSelected()?.creator?.image"
+        [alt]="'Image of ' + detailSong.songSelected()?.creator?.name"
+      />
+    </div>
+    <div class="p-4 space-y-4">
+      <h5 class="font-bold">
+        {{ detailSong.songSelected()?.creator?.name }}
+      </h5>
+      <span class="text-muted">
+        {{ detailSong.songSelected()?.creator?.monthlyListeners | number }}
+        monthly listeners
+      </span>
+      <p class="text-muted text-sm line-clamp-3">
+        {{ detailSong.songSelected()?.creator?.description }}
+      </p>
+    </div>
+  </div>
+</div>

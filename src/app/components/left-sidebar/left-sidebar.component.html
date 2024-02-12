@@ -36,7 +36,7 @@
     </a>
   </div>
 
-  <div class="bg-background h-full rounded-md py-3 space-y-2">
+  <div class="bg-background rounded-md pt-3 space-y-2">
     <a
       [routerLink]="['/']"
       class="flex items-center gap-5 py-2 px-6 font-bold text-muted hover:text-white transition-colors duration-300"
@@ -55,7 +55,7 @@
       Your library
     </a>
 
-    <div class="pl-3 overflow-y-scroll h-left-sidebar-scroll">
+    <div class="pl-3 overflow-y-scroll h-left-sidebar-scroll rounded-md">
       @for (playlist of playlists; track playlist.id; let even = $even) {
         <a
           class="p-2 flex items-center gap-2 rounded-md bg-background hover:bg-background-card transition-colors duration-100"

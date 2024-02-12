@@ -7,8 +7,10 @@ import {
   OnChanges,
   Output,
   ViewChild,
+  inject,
 } from '@angular/core';
 import { Song } from '../../lib/data';
+import { DetailSongService } from '../../services/detail-song.service';
 
 @Component({
   selector: 'app-songs-table',
@@ -24,7 +26,9 @@ export class SongsTableComponent implements OnChanges {
   @Input({ required: true }) songs: Song[] = [];
   @Output() tableHeight = new EventEmitter<number>();
 
+  detailSong = inject(DetailSongService);
+
   ngOnChanges() {
-    this.tableHeight.emit((64.5 * this.songs.length) + 44);
+    this.tableHeight.emit(64.5 * this.songs.length + 44);
   }
 }

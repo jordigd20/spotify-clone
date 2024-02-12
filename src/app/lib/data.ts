@@ -293,7 +293,7 @@ export const songs: Song[] = [
     playlistId: 1,
     title: 'Thunderstruck',
     image:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220841/spotify-clone/songs/txgl3slvmqgbsgakjfkb.webp',
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220978/spotify-clone/songs/etjvvqe68dudu3lbxjxv.webp',
     creator: artists[1],
     artists: ['AC/DC'],
     album: 'The Razors Edge',
