@@ -163,3 +163,7 @@ html {
 .custom-slider .ngx-slider .ngx-slider-pointer:after {
   display: none;
 }
+
+.custom-slider .ngx-slider[disabled] {
+  cursor: default;
+}

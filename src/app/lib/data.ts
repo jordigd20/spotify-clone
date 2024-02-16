@@ -27,6 +27,8 @@ export interface Song {
   artists: string[];
   album: string;
   duration: string;
+  durationInSeconds: number;
+  audio: string;
 }
 
 export const playlists: Playlist[] = [
@@ -286,7 +288,10 @@ export const songs: Song[] = [
     creator: artists[0],
     artists: ['Bon Jovi'],
     album: 'Bon Jovi',
-    duration: '3:51',
+    duration: '3:52',
+    durationInSeconds: 232,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707935054/spotify-clone/audios/pdj6fhasdlb2l6zxfsjh.mp3',
   },
   {
     id: 2,
@@ -298,6 +303,9 @@ export const songs: Song[] = [
     artists: ['AC/DC'],
     album: 'The Razors Edge',
     duration: '4:52',
+    durationInSeconds: 292,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997301/spotify-clone/audios/lzbjtpy1cvrythn8v20o.mp3',
   },
   {
     id: 3,
@@ -308,7 +316,10 @@ export const songs: Song[] = [
     creator: artists[2],
     artists: ['Queen'],
     album: 'A Night At The Opera',
-    duration: '5:54',
+    duration: '5:59',
+    durationInSeconds: 359,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997343/spotify-clone/audios/eoovcleuxmw9lerqd5pn.mp3',
   },
   {
     id: 4,
@@ -319,7 +330,10 @@ export const songs: Song[] = [
     creator: artists[3],
     artists: ['Aerosmith'],
     album: 'Aerosmith',
-    duration: '5:54',
+    duration: '4:28',
+    durationInSeconds: 268,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997396/spotify-clone/audios/w656irqzwktb4zzikvao.mp3',
   },
   {
     id: 5,
@@ -330,7 +344,10 @@ export const songs: Song[] = [
     creator: artists[4],
     artists: ['Red Hot Chilli Peppers'],
     album: 'Californication',
-    duration: '5:29',
+    duration: '5:21',
+    durationInSeconds: 321,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997443/spotify-clone/audios/wrjlipcn30naqg5wzhin.mp3',
   },
   {
     id: 6,
@@ -341,7 +358,10 @@ export const songs: Song[] = [
     creator: artists[5],
     artists: ['Nirvana'],
     album: 'Nevermind',
-    duration: '3:38',
+    duration: '3:44',
+    durationInSeconds: 224,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997470/spotify-clone/audios/r3tccgbgd5yexktcvg9p.mp3',
   },
   {
     id: 7,
@@ -352,7 +372,10 @@ export const songs: Song[] = [
     creator: artists[6],
     artists: ["Guns N' Roses"],
     album: 'Appetite For Destruction',
-    duration: '5:56',
+    duration: '5:02',
+    durationInSeconds: 302,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997503/spotify-clone/audios/t9kz8tssezb21ydg5h1v.mp3',
   },
   {
     id: 8,
@@ -363,7 +386,10 @@ export const songs: Song[] = [
     creator: artists[7],
     artists: ['Metallica'],
     album: 'Metallica',
-    duration: '5:56',
+    duration: '5:31',
+    durationInSeconds: 331,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997529/spotify-clone/audios/h8qbsromtjtdfrexqby5.mp3',
   },
   {
     id: 9,
@@ -374,7 +400,10 @@ export const songs: Song[] = [
     creator: artists[0],
     artists: ['Bon Jovi'],
     album: 'Slippery When Wet',
-    duration: '4:09',
+    duration: '4:08',
+    durationInSeconds: 248,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997576/spotify-clone/audios/iuhzyposbivge47ujyxm.mp3',
   },
   {
     id: 10,
@@ -386,6 +415,9 @@ export const songs: Song[] = [
     artists: ['Red Hot Chilli Peppers'],
     album: 'Blood Sugar',
     duration: '4:24',
+    durationInSeconds: 264,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997596/spotify-clone/audios/iqnqqphznffrompkffoj.mp3',
   },
   {
     id: 11,
@@ -396,7 +428,10 @@ export const songs: Song[] = [
     creator: artists[8],
     artists: ['Peso Pluma', 'Anitta'],
     album: 'BELLAKEO',
-    duration: '3:17',
+    duration: '3:18',
+    durationInSeconds: 198,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997619/spotify-clone/audios/qsuemxxro40qp4kebybm.mp3',
   },
   {
     id: 12,
@@ -408,6 +443,9 @@ export const songs: Song[] = [
     artists: ['Bad Bunny', 'Feid'],
     album: 'nadie sabe lo que va a pasar mañana',
     duration: '2:42',
+    durationInSeconds: 162,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997641/spotify-clone/audios/gvxdiv91gmsusvxwhyfz.mp3',
   },
   {
     id: 13,
@@ -418,7 +456,10 @@ export const songs: Song[] = [
     creator: artists[10],
     artists: ['Bizarrap', 'Young Miko'],
     album: 'Young Miko: Bzrp Music Sessions, Vol. 58',
-    duration: '3:07',
+    duration: '3:08',
+    durationInSeconds: 188,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997663/spotify-clone/audios/ywn02jlosm2bvl4tem5l.mp3',
   },
   {
     id: 14,
@@ -430,6 +471,9 @@ export const songs: Song[] = [
     artists: ['Karol G', 'Peso Pluma'],
     album: 'MAÑANA SERÁ BONITO',
     duration: '2:52',
+    durationInSeconds: 172,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997686/spotify-clone/audios/hwdxjfsaii9ck1mcas9u.mp3',
   },
   {
     id: 15,
@@ -440,7 +484,10 @@ export const songs: Song[] = [
     creator: artists[12],
     artists: ['Emilia', 'Tini'],
     album: 'La_Original.mp3',
-    duration: '2:20',
+    duration: '2:24',
+    durationInSeconds: 144,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997718/spotify-clone/audios/f7z45nabkeb8a6j7zroj.mp3',
   },
   {
     id: 16,
@@ -452,5 +499,8 @@ export const songs: Song[] = [
     artists: ['Feid', 'ATL Jacob'],
     album: 'FERXXOCALIPSIS',
     duration: '3:16',
+    durationInSeconds: 196,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997747/spotify-clone/audios/p4ulb9eoxaidy4vy3y24.mp3',
   },
 ];

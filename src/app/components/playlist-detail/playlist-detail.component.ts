@@ -10,6 +10,7 @@ import { Playlist, Song, allPlaylists, songs } from '../../lib/data';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule, Location } from '@angular/common';
 import { SongsTableComponent } from '../songs-table/songs-table.component';
+import { AudioService } from '../../services/audio.service';
 
 @Component({
   selector: 'app-playlist-detail',
@@ -25,6 +26,7 @@ export class PlaylistDetailComponent {
   activeRoute = inject(ActivatedRoute);
   router = inject(Router);
   location = inject(Location);
+  audioService = inject(AudioService);
 
   playlist = signal<Playlist | undefined>(undefined);
   someArtists = signal<string[]>([]);
@@ -39,8 +41,8 @@ export class PlaylistDetailComponent {
 
   ngOnInit() {
     this.activeRoute.params.subscribe((params) => {
-      const playlistId = params['id'];
-      this.playlist.set(allPlaylists.find((p) => p.id === Number(playlistId)));
+      const playlistId = Number(params['id']);
+      this.playlist.set(allPlaylists.find((p) => p.id === playlistId));
 
       if (!this.playlist()) {
         this.router.navigate(['/']);
@@ -48,9 +50,10 @@ export class PlaylistDetailComponent {
       }
 
       this.bgColor.set(this.playlist()!.color.rgb);
-      this.songs.set(songs.filter((s) => s.playlistId === Number(playlistId)));
+      this.songs.set(
+        this.audioService.getSongsFromPlaylistId(this.playlist()!.id),
+      );
       this.someArtists.set((this.playlist()?.artists || []).slice(0, 2));
-      console.log(this.location.getState());
     });
   }
 
