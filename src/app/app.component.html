@@ -1,2 +1,19 @@
-<router-outlet />
+<div
+  class="px-2 pt-2 flex sm:grid overflow-y-hidden w-full relative h-full min-h-full sm:gap-2"
+  [ngClass]="
+    detailSong.isDetailOpened() ? 'sidebars-layout' : 'left-sidebar-layout'
+  "
+>
+  <app-left-sidebar
+    class="left-sidebar hidden sm:block sm:w-left-sidebar h-full relative rounded-md"
+  />
+
+  <router-outlet />
+
+  @if (detailSong.isDetailOpened()) {
+    <app-right-sidebar
+      class="hidden lg:block relative right-sidebar bg-background h-content w-[280px] xl:w-[320px] rounded-md"
+    />
+  }
+</div>
 <app-playing-bar class="relative w-full h-playing-bar block bg-black z-20" />

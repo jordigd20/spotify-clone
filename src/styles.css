@@ -6,8 +6,8 @@
   --panel-gap: 8px;
   --left-sidebar-width: 320px;
   --playing-bar-height: 80px;
-  --content-height: calc(100vh - var(--playing-bar-height) - (var(--panel-gap)));
-  --sidebar-scroll-height: calc(100vh - var(--playing-bar-height) - 164px - (var(--panel-gap) * 3));
+  --content-height: calc(100vh - var(--playing-bar-height) - (var(--panel-gap)) * 2);
+  --sidebar-scroll-height: calc(100vh - var(--playing-bar-height) - 164px - (var(--panel-gap) * 4));
   --playlist-image-fluid: clamp(128px, 128px + (100vw - var(--left-sidebar-width, 0px) - var(--panel-width, 0px) - 600px)/424*104, 232px);
   --playlist-header-fluid: clamp(250px, 250px + (100vw - 281px - 0px - 600px)/424*150, 275px);
   --primary: 31, 223, 100;

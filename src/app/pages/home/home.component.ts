@@ -1,24 +1,47 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { LeftSidebarComponent } from '../../components/left-sidebar/left-sidebar.component';
-import { MainViewComponent } from '../../components/main-view/main-view.component';
-import { RightSidebarComponent } from '../../components/right-sidebar/right-sidebar.component';
-import { PlayingBarComponent } from '../../components/playing-bar/playing-bar.component';
-import { DetailSongService } from '../../services/detail-song.service';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Playlist, morePlaylists, playlists } from '../../lib/data';
+import { RouterLink } from '@angular/router';
+import { PlaylistCardComponent } from '../../components/playlist-card/playlist-card.component';
+
+const DEFAULT_COLOR = '#0f6f32';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    LeftSidebarComponent,
-    MainViewComponent,
-    RightSidebarComponent,
-    PlayingBarComponent,
-  ],
+  imports: [CommonModule, RouterLink, PlaylistCardComponent],
   templateUrl: './home.component.html',
+  host: {
+    class:
+      'main-view relative w-full bg-background rounded-md h-content overflow-y-auto',
+  },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  detailSong = inject(DetailSongService);
+  playlists: Playlist[] = playlists;
+  madeForYou: Playlist[] = morePlaylists;
+  gradientColor = signal(DEFAULT_COLOR);
+  greetingsMessage = signal('');
+
+  ngOnInit() {
+    const date = new Date();
+    const currentHour = date.getHours();
+
+    if (currentHour < 12) {
+      this.greetingsMessage.set('¡Good morning!');
+    } else if (currentHour < 18) {
+      this.greetingsMessage.set('¡Good afternoon!');
+    } else {
+      this.greetingsMessage.set('¡Good evening!');
+    }
+  }
+
+  onPlaylistHover(playlist: Playlist | null) {
+    if (!playlist) {
+      this.gradientColor.set(DEFAULT_COLOR);
+      return;
+    }
+
+    this.gradientColor.set(playlist.color.hex);
+  }
 }
