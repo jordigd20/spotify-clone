@@ -10,7 +10,7 @@
           />
         </button>
 
-        <div class="text-sm flex flex-col px-2">
+        <div class="text-sm flex flex-col px-2 break-all">
           <span role="button" class="hover:underline line-clamp-1">
             {{ audioService.currentSong()?.title }}
           </span>
@@ -108,6 +108,7 @@
     </div>
 
     <div class="hidden sm:flex w-[30%] items-center justify-end">
+      <app-btn-queue />
       <app-btn-mute
         [isMuted]="audioService.isMuted()"
         [volume]="audioService.volumeDisplayed"
@@ -126,6 +127,7 @@
     @defer (when isSmallScreen()) {
       <div class="flex sm:hidden items-center gap-2">
         <div class="flex items-center">
+          <app-btn-queue />
           <app-btn-random-mode
             [randomMode]="audioService.randomMode()"
             (toggle)="audioService.toggleRandomMode()"

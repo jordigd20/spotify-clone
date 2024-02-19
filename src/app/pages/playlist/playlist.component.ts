@@ -1,18 +1,21 @@
 import { CommonModule, Location } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ElementRef, ViewChild, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  ViewChild,
+  inject,
+  signal,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AudioService } from '../../services/audio.service';
 import { Playlist, Song, allPlaylists } from '../../lib/data';
 import { SongsTableComponent } from '../../components/songs-table/songs-table.component';
 
-
 @Component({
   selector: 'app-playlist',
   standalone: true,
-  imports: [
-    CommonModule,
-    SongsTableComponent
-  ],
+  imports: [CommonModule, SongsTableComponent],
   templateUrl: './playlist.component.html',
   host: {
     class:
@@ -64,5 +67,9 @@ export class PlaylistComponent {
 
   navigateBack() {
     if (this.navigationState > 1) this.location.back();
+  }
+
+  navigateHome() {
+    this.router.navigate(['/']);
   }
 }

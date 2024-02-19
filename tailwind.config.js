@@ -44,6 +44,19 @@ module.exports = {
           transparent: 'rgba(var(--muted-transparent))',
         },
       },
+      animation: {
+        'music-bar': 'music-bar 1s infinite linear',
+      },
+      keyframes: {
+        'music-bar': {
+          '0%': { height: '1px' },
+          '10%': { height: '12px' },
+          '50%': { height: '4px' },
+          '60%': { height: '8px' },
+          '80%': { height: '14px' },
+          '100%': { height: '2px' },
+        }
+      }
     },
   },
   plugins: [],

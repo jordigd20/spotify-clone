@@ -1,0 +1,23 @@
+<button
+  class="p-2 cursor-default transition-colors relative"
+  [ngClass]="
+    currentRoute() === 'queue'
+      ? 'text-primary hover:text-primary before:absolute before:rounded-full before:w-1 before:h-1 before:bg-primary before:bottom-0 before:-translate-x-1/2 before:left-1/2'
+      : 'text-muted hover:text-white'
+  "
+  [attr.aria-pressed]="currentRoute() === 'queue' ? 'true' : 'false'"
+  aria-label="Navigate to songs queue"
+  (click)="currentRoute() === 'queue' ? navigateBack() : navigateToQueue()"
+>
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xlmns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="currentColor"
+      d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z"
+    ></path>
+  </svg>
+</button>

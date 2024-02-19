@@ -9,8 +9,7 @@
     <button
       class="p-2 bg-black/70 rounded-full hover:bg-black transition-colors duration-300 disabled:bg-black/30 disabled:hover:bg-black/30"
       aria-label="Go back"
-      [disabled]="navigationState <= 1"
-      (click)="navigateBack()"
+      (click)="navigationState <= 1 ? navigateHome() : navigateBack()"
     >
       <svg
         width="16"

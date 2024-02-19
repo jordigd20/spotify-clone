@@ -15,8 +15,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'queue',
+    loadComponent: () =>
+      import('./pages/queue/queue.component').then((m) => m.QueueComponent),
+  },
+  {
     path: '**',
     redirectTo: '/',
     pathMatch: 'full',
-  }
+  },
 ];

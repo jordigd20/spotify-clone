@@ -14,6 +14,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { BtnRandomModeComponent } from '../buttons/btn-random-mode/btn-random-mode.component';
 import { BtnMuteComponent } from '../buttons/btn-mute/btn-mute.component';
 import { BtnPlayComponent } from '../buttons/btn-play/btn-play.component';
+import { BtnQueueComponent } from '../buttons/btn-queue/btn-queue.component';
 
 @Component({
   selector: 'app-playing-bar',
@@ -25,7 +26,8 @@ import { BtnPlayComponent } from '../buttons/btn-play/btn-play.component';
     LayoutModule,
     BtnPlayComponent,
     BtnRandomModeComponent,
-    BtnMuteComponent
+    BtnMuteComponent,
+    BtnQueueComponent,
   ],
   templateUrl: './playing-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
