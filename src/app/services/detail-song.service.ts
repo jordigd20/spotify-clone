@@ -1,5 +1,10 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
 import { Song } from '../lib/data';
+
+interface DetailSongState {
+  isDetailOpened: boolean;
+  songSelected: Song | undefined;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -7,20 +12,33 @@ import { Song } from '../lib/data';
 export class DetailSongService {
   constructor() {}
 
-  isDetailOpened = signal(false);
-  songSelected = signal<Song | null>(null);
+  private detailSongState = signal<DetailSongState>({
+    isDetailOpened: false,
+    songSelected: undefined,
+  });
+
+  isDetailOpened = computed(() => this.detailSongState().isDetailOpened);
+  songSelected = computed(() => this.detailSongState().songSelected);
 
   openDetail(song: Song) {
-    this.isDetailOpened.set(true);
-    this.songSelected.set(song);
+    this.detailSongState.update((state) => ({
+      ...state,
+      isDetailOpened: true,
+      songSelected: song,
+    }));
   }
 
-  changeSongSelected(song: Song) {
-    this.songSelected.set(song);
+  updateSong(song: Song) {
+    this.detailSongState.update((state) => ({
+      ...state,
+      songSelected: song,
+    }));
   }
 
   closeDetail() {
-    this.songSelected.set(null);
-    this.isDetailOpened.set(false);
+    this.detailSongState.update((state) => ({
+      ...state,
+      isDetailOpened: false,
+    }));
   }
 }

@@ -1,6 +1,7 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 import { Playlist, Song, songs } from '../lib/data';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { DetailSongService } from './detail-song.service';
 
 interface AudioState {
   isPlaying: boolean;
@@ -17,6 +18,8 @@ interface AudioState {
   providedIn: 'root',
 })
 export class AudioService {
+  private detailSong = inject(DetailSongService);
+
   private currentAudio = new Audio();
   private audioState = signal<AudioState>({
     isPlaying: false,
@@ -147,6 +150,10 @@ export class AudioService {
   }
 
   updateVolume(volume: number) {
+    if (volume < 0 || volume > 1) {
+      return;
+    }
+
     if (!this.isMuted()) {
       this.volumeDisplayed = volume;
       this.volume$.next(volume);
@@ -155,6 +162,8 @@ export class AudioService {
     if (this.isMuted() && volume > 0) {
       this.currentAudio.muted = false;
       this.audioState.update((state) => ({ ...state, isMuted: false }));
+      this.volumeDisplayed = volume;
+      this.volume$.next(volume);
     }
   }
 
@@ -220,9 +229,6 @@ export class AudioService {
       songsQueue: state.songsQueue.slice(1),
     }));
 
-    console.log(song);
-    console.log(this.songsQueue());
-
     if (song) {
       this.currentSong$.next(song);
       this.currentAudio.src = song.audio;
@@ -231,7 +237,7 @@ export class AudioService {
         ...state,
         songsHistory: [song, ...state.songsHistory],
       }));
-      console.log(this.songsHistory());
+      this.detailSong.updateSong(song);
       clearInterval(this.intervalId());
       this.play();
     } else {

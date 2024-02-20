@@ -49,7 +49,7 @@
       <h2 class="font-bold text-muted mb-2">Now playing</h2>
 
       <div
-        class="group hover:bg-gray-500/20 transition-colors w-full flex lg:grid lg:grid-cols-12 items-center"
+        class="group hover:bg-gray-500/20 transition-colors w-full flex lg:grid lg:grid-cols-12 items-center text-sm"
       >
         <div class="flex items-center text-primary lg:col-span-6">
           @if (audioService.isPlaying()) {
@@ -68,7 +68,7 @@
               ></span>
             </div>
           } @else {
-            <div class="px-4 py-2 text-primary"> 1 </div>
+            <div class="px-4 py-2 text-primary">1</div>
           }
 
           <div class="px-4 py-2 flex items-center gap-4">

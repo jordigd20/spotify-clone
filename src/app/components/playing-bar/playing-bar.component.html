@@ -2,7 +2,10 @@
   <div class="sm:px-3 sm:py-2 flex items-center justify-between">
     <div class="sm:w-[30%] flex items-center gap-2">
       @if (audioService.currentSong()) {
-        <button class="w-14 h-14 aspect-square">
+        <button
+          class="w-14 h-14 aspect-square"
+          (click)="detailSong.openDetail(audioService.currentSong()!)"
+        >
           <img
             class="w-full h-full object-cover rounded-sm"
             [src]="audioService.currentSong()?.image"
@@ -11,7 +14,11 @@
         </button>
 
         <div class="text-sm flex flex-col px-2 break-all">
-          <span role="button" class="hover:underline line-clamp-1">
+          <span
+            role="button"
+            class="hover:underline line-clamp-1"
+            (click)="detailSong.openDetail(audioService.currentSong()!)"
+          >
             {{ audioService.currentSong()?.title }}
           </span>
           <span class="text-muted line-clamp-1">

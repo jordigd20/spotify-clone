@@ -15,6 +15,7 @@ import { BtnRandomModeComponent } from '../buttons/btn-random-mode/btn-random-mo
 import { BtnMuteComponent } from '../buttons/btn-mute/btn-mute.component';
 import { BtnPlayComponent } from '../buttons/btn-play/btn-play.component';
 import { BtnQueueComponent } from '../buttons/btn-queue/btn-queue.component';
+import { DetailSongService } from '../../services/detail-song.service';
 
 @Component({
   selector: 'app-playing-bar',
@@ -36,6 +37,7 @@ export class PlayingBarComponent {
   audioService = inject(AudioService);
   changeDetectorRef = inject(ChangeDetectorRef);
   breakpointObserver = inject(BreakpointObserver);
+  detailSong = inject(DetailSongService);
 
   value: number = 0;
   valueMobile: number = 0;
