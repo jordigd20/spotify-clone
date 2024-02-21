@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Playlist } from '../../lib/data';
+import { AudioService } from '../../services/audio.service';
 
 @Component({
   selector: 'app-playlist-card',
@@ -11,4 +12,6 @@ import { Playlist } from '../../lib/data';
 })
 export class PlaylistCardComponent {
   @Input({ required: true }) playlist!: Playlist;
+
+  audioService = inject(AudioService);
 }

@@ -56,7 +56,7 @@
     </a>
 
     <div class="pl-3 overflow-y-scroll h-left-sidebar-scroll rounded-md">
-      @for (playlist of playlists; track playlist.id; let even = $even) {
+      @for (playlist of playlists; track playlist.id) {
         <a
           class="p-2 flex items-center gap-2 rounded-md bg-background hover:bg-background-card transition-colors duration-100"
           [routerLink]="['/playlist', playlist.id]"
@@ -71,29 +71,40 @@
 
           <div class="flex items-center justify-between gap-1 w-full">
             <div class="pr-1">
-              <h4>{{ playlist.title }}</h4>
-              <span class="text-sm text-muted line-clamp-1">
+              <h4
+                [ngClass]="{
+                  'text-primary': audioService.playlist()?.id === playlist.id
+                }"
+              >
+                {{ playlist.title }}
+              </h4>
+              <span class="text-sm text-muted max-w-44 line-clamp-1">
                 {{ playlist.artists.join(", ") }}
               </span>
             </div>
 
-            @if (even) {
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-                class="min-w-4 min-h-4"
-              >
-                <path
-                  fill="currentColor"
-                  d="M10.016 1.125A.75.75 0 0 0 8.99.85l-6.925 4a3.639 3.639 0 0 0 0 6.299l6.925 4a.75.75 0 0 0 1.125-.65v-13a.75.75 0 0 0-.1-.375zM11.5 5.56a2.75 2.75 0 0 1 0 4.88V5.56z"
-                ></path>
-                <path
-                  fill="currentColor"
-                  d="M16 8a5.752 5.752 0 0 1-4.5 5.614v-1.55a4.252 4.252 0 0 0 0-8.127v-1.55A5.752 5.752 0 0 1 16 8z"
-                ></path>
-              </svg>
+            @if (
+              audioService.isPlaying() &&
+              audioService.playlist()?.id === playlist.id
+            ) {
+              <div class="p-2">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="min-w-4 min-h-4 text-primary"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M10.016 1.125A.75.75 0 0 0 8.99.85l-6.925 4a3.639 3.639 0 0 0 0 6.299l6.925 4a.75.75 0 0 0 1.125-.65v-13a.75.75 0 0 0-.1-.375zM11.5 5.56a2.75 2.75 0 0 1 0 4.88V5.56z"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M16 8a5.752 5.752 0 0 1-4.5 5.614v-1.55a4.252 4.252 0 0 0 0-8.127v-1.55A5.752 5.752 0 0 1 16 8z"
+                  ></path>
+                </svg>
+              </div>
             }
           </div>
         </a>

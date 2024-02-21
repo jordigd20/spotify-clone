@@ -1,14 +1,14 @@
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
 import { SongsTableComponent } from '../../components/songs-table/songs-table.component';
 import { AudioService } from '../../services/audio.service';
 import { DetailSongService } from '../../services/detail-song.service';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-queue',
   standalone: true,
-  imports: [CommonModule, SongsTableComponent],
+  imports: [CommonModule, SongsTableComponent, HeaderComponent],
   templateUrl: './queue.component.html',
   host: {
     class:
@@ -16,20 +16,6 @@ import { DetailSongService } from '../../services/detail-song.service';
   },
 })
 export class QueueComponent {
-  router = inject(Router);
-  location = inject(Location);
   audioService = inject(AudioService);
   detailSong = inject(DetailSongService);
-
-  get navigationState() {
-    return (this.location.getState() as any)['navigationId'] ?? 0;
-  }
-
-  navigateBack() {
-    if (this.navigationState > 1) this.location.back();
-  }
-
-  navigateHome() {
-    this.router.navigate(['/']);
-  }
 }

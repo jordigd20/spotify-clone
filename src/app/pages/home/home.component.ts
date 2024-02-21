@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Playlist, morePlaylists, playlists } from '../../lib/data';
 import { RouterLink } from '@angular/router';
 import { PlaylistCardComponent } from '../../components/playlist-card/playlist-card.component';
+import { AudioService } from '../../services/audio.service';
 
 const DEFAULT_COLOR = '#0f6f32';
 
@@ -18,6 +19,8 @@ const DEFAULT_COLOR = '#0f6f32';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
+  audioService = inject(AudioService);
+
   playlists: Playlist[] = playlists;
   madeForYou: Playlist[] = morePlaylists;
   gradientColor = signal(DEFAULT_COLOR);

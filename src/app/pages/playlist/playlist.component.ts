@@ -1,4 +1,4 @@
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,11 +11,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AudioService } from '../../services/audio.service';
 import { Playlist, Song, allPlaylists } from '../../lib/data';
 import { SongsTableComponent } from '../../components/songs-table/songs-table.component';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-playlist',
   standalone: true,
-  imports: [CommonModule, SongsTableComponent],
+  imports: [CommonModule, SongsTableComponent, HeaderComponent],
   templateUrl: './playlist.component.html',
   host: {
     class:
@@ -29,7 +30,6 @@ export class PlaylistComponent {
 
   activeRoute = inject(ActivatedRoute);
   router = inject(Router);
-  location = inject(Location);
   audioService = inject(AudioService);
 
   playlist = signal<Playlist | undefined>(undefined);
@@ -39,9 +39,6 @@ export class PlaylistComponent {
   headerHeight = signal(0);
   bgColor = signal('200, 200, 200');
 
-  get navigationState() {
-    return (this.location.getState() as any)['navigationId'] ?? 0;
-  }
 
   ngOnInit() {
     this.activeRoute.params.subscribe((params) => {
@@ -63,13 +60,5 @@ export class PlaylistComponent {
 
   ngAfterViewInit() {
     this.headerHeight.set(this.headerContainer.nativeElement.offsetHeight);
-  }
-
-  navigateBack() {
-    if (this.navigationState > 1) this.location.back();
-  }
-
-  navigateHome() {
-    this.router.navigate(['/']);
   }
 }
