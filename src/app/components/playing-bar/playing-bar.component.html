@@ -3,11 +3,11 @@
     <div class="sm:w-[30%] flex items-center gap-2">
       @if (audioService.currentSong()) {
         <button
-          class="w-14 h-14 aspect-square"
+          class="group relative w-14 h-14 aspect-square overflow-hidden rounded-sm"
           (click)="detailSong.openDetail(audioService.currentSong()!)"
         >
           <img
-            class="w-full h-full object-cover rounded-sm"
+            class="absolute inset-0 w-full h-full object-cover rounded-sm transition-transform group-hover:scale-[1.15]"
             [src]="audioService.currentSong()?.image"
             [alt]="'Cover of ' + audioService.currentSong()?.title"
           />

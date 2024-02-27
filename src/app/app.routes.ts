@@ -20,6 +20,11 @@ export const routes: Routes = [
       import('./pages/queue/queue.component').then((m) => m.QueueComponent),
   },
   {
+    path: 'search',
+    loadComponent: () =>
+      import('./pages/search/search.component').then((m) => m.SearchComponent),
+  },
+  {
     path: '**',
     redirectTo: '/',
     pathMatch: 'full',
