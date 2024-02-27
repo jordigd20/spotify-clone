@@ -38,7 +38,7 @@ export const playlists: Playlist[] = [
     color: colors.green,
     cover:
       'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707573243/spotify-clone/playlists/inlfzxzrympwz6rg4tpg.webp',
-    artists: ['Bon Jovi', 'AC/DC', 'Queen'],
+    artists: ['Bon Jovi', 'AC/DC', 'Queen', 'Metallica'],
     time: '3h 15m',
     likes: 12001654,
   },
@@ -97,51 +97,52 @@ export const playlists: Playlist[] = [
 export const morePlaylists: Playlist[] = [
   {
     id: 7,
-    title: 'Essential Indie',
-    color: colors.yellow,
+    title: 'Discover Weekly',
+    color: colors.lightblue,
     cover:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ffjxma92cgibpz9gewww.webp',
-    artists: ['Dijon', 'Beach House', 'Clairo', 'Phoebe Bridgers'],
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709207121/spotify-clone/playlists/lf1mzf3oyzbllowyenpa.webp',
+    artists: ['Your weekly mixtape of fresh music'],
     time: '3h 15m',
     likes: 12001654,
   },
   {
     id: 8,
-    title: 'Classical Essentials',
-    color: colors.indigo,
+    title: 'Rock Mix',
+    color: colors.red,
     cover:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ijo477nl97rgimrntf9t.webp',
-    artists: ['Johann Sebastian Bach', 'Ludwig van Beethoven', 'Yo-Yo Ma'],
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709205917/spotify-clone/playlists/skz9xsbyiuxhq77c9set.webp',
+    artists: ['Aerosmith', 'Red Hot Chilli Peppers', 'Nirvana'],
     time: '3h 15m',
     likes: 12001654,
   },
   {
     id: 9,
-    title: 'Soul Blues',
-    color: colors.gray,
+    title: 'Electronic Mix',
+    color: colors.indigo,
     cover:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/i4prkpvee6mpzdllyktt.webp',
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709206022/spotify-clone/playlists/a3hloejuxdx9sxaxmroh.webp',
     artists: ['Joe Louis Walker', 'Solomon Burke', 'Jade Macrae'],
     time: '3h 15m',
     likes: 12001654,
   },
   {
     id: 10,
-    title: "Today's Top Hits",
+    title: "Today's Pop Hits",
     color: colors.red,
     cover:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220625/spotify-clone/playlists/ijeo71h7pkczvdxokdby.webp',
-    artists: ['Jack Harlow', 'Ariana Grande', 'SZA'],
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709206672/spotify-clone/playlists/mbx7fblz5zxhqx3gdznr.webp',
+    artists: ['Ariana Grande', 'Billie Eilish', 'Miley Cyrus'],
     time: '3h 15m',
     likes: 12001654,
   },
   {
     id: 11,
-    title: "Today's Top Hits",
-    color: colors.yellow,
+
+    title: 'Hip Hop Drive',
+    color: colors.yelloworange,
     cover:
-      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220624/spotify-clone/playlists/k8vopi9ysvqud5izwvgu.webp',
-    artists: ['Eminem', 'Wu-Tang Clan', 'Big Tymers'],
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709206787/spotify-clone/playlists/t4zbudgediiyocdkfzzz.webp',
+    artists: ['Eminem', '2Pac', '50 Cent', 'Snoop Dogg'],
     time: '3h 15m',
     likes: 12001654,
   },
@@ -275,6 +276,168 @@ export const artists: Artist[] = [
     monthlyListeners: 45675335,
     description:
       'Feid, whose real name is Salomón Villada Hoyos, is a Colombian singer and songwriter known for his vibrant and eclectic approach to reggaeton and Latin pop music. Born on August 19, 1992, in Medellín, Colombia, Feid has made a significant impact on the Latin music scene with his catchy tunes and versatile style.',
+  },
+  {
+    id: 15,
+    name: 'Ariana Grande',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709139387/spotify-clone/artists/bgjt3bflezyykev1pkdy.webp',
+    monthlyListeners: 79920382,
+    description:
+      'With her four-octave vocal acrobatics and iconic image, American singer, songwriter, and actress Ariana Grande has solidified her place as one of the quintessential pop stars of her generation, racking up stacks of awards and chart records in the process.',
+  },
+  {
+    id: 16,
+    name: 'Taylor Swift',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709139418/spotify-clone/artists/cjzfoc22fqbce3kopjk0.webp',
+    monthlyListeners: 105606227,
+    description:
+      'Taylor Swift is a globally acclaimed American singer-songwriter and actress. Renowned for her exceptional songwriting skills and versatile musical talent, Swift has left an indelible mark on the pop and country music genres. Beginning her career as a country artist, she transitioned seamlessly into pop music, showcasing her ability to evolve and experiment with different styles.',
+  },
+  {
+    id: 17,
+    name: 'Billie Eilish',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709139432/spotify-clone/artists/opkygbq1kdhjibbbbude.webp',
+    monthlyListeners: 66902624,
+    description:
+      'Billie Eilish, born on December 18, 2001, is an American singer-songwriter and global pop sensation. Emerging as a breakthrough artist in the music scene, Eilish quickly captivated audiences with her distinctive sound, characterized by haunting melodies, whispered vocals, and genre-defying compositions. ',
+  },
+  {
+    id: 18,
+    name: 'Selenga Gomez',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709139444/spotify-clone/artists/ls4rufk5m2szp4ikidp1.webp',
+    monthlyListeners: 47883285,
+    description:
+      'Selena Gomez, born on July 22, 1992, is an American singer, actress, and producer who has become a prominent figure in the entertainment industry. Rising to fame as the star of Disney Channel\'s "Wizards of Waverly Place", Gomez transitioned seamlessly into a successful music career. ',
+  },
+  {
+    id: 19,
+    name: 'Miley Cyrus',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709139472/spotify-clone/artists/uvrxkta0v0p5tehpxeeq.webp',
+    monthlyListeners: 64686014,
+    description:
+      'Miley Cyrus, born Destiny Hope Cyrus on November 23, 1992, is a multi-talented American singer, songwriter, and actress. Her music, ranging from pop and country to rock and hip-hop influences, reflects this evolution, with chart-topping hits like "Wrecking Ball", "Party in the USA", and "Malibu".',
+  },
+  {
+    id: 20,
+    name: 'Shawn Mendes',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709139484/spotify-clone/artists/iijfa8kz0ltbtyv9jdtz.webp',
+    monthlyListeners: 44228181,
+    description:
+      "A Juno-winning and Grammy-nominated pop singer/songwriter who broke records with his debut single, Canada's Shawn Mendes became known to international audiences when he was just 15. His mix of 's and 's styles was a hit from his first single, 2014's \"Life of the Party,\" which made him the youngest artist to land a debut single in the Top 25 in the U.S.",
+  },
+  {
+    id: 21,
+    name: 'Dua Lipa',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141913/spotify-clone/artists/fssvqipoarohe8ysv0c8.webp',
+    monthlyListeners: 75991817,
+    description:
+      '3x GRAMMY and 6x Brit Award-winning international pop powerhouse Dua Lipa closed out 2022 as one of the top performers of the year, with both Variety and Billboard naming her Future Nostalgia World Tour among the best live shows of the year.',
+  },
+  {
+    id: 22,
+    name: '50 Cent',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141439/spotify-clone/artists/wem8zbm8hcwglcq1myxh.webp',
+    monthlyListeners: 36255887,
+    description:
+      '50 Cent, born Curtis James Jackson III on July 6, 1975, is an American rapper, actor, and entrepreneur who rose to prominence in the early 2000s. Hailing from Queens, New York, 50 Cent gained widespread recognition with his debut album "Get Rich or Die Tryin\'" in 2003, featuring hit singles like "In Da Club" and "21 Questions." Known for his gritty lyrics, catchy hooks, and unique delivery, he became a central figure in the hip-hop scene.',
+  },
+  {
+    id: 23,
+    name: 'Eminem',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141455/spotify-clone/artists/lx2bzx6ckw3qgwgepgad.webp',
+    monthlyListeners: 70635630,
+    description:
+      'Apart from being one of the best-selling artists in music history, Eminem is one of the greatest rappers of his generation: effortlessly fast, fluid, dexterous, and unpredictable, capable of pulling off long-form narratives or withering asides.',
+  },
+  {
+    id: 24,
+    name: '2Pac',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141468/spotify-clone/artists/vey3gsc4myy1czvlccva.webp',
+    monthlyListeners: 23039902,
+    description:
+      "A natural ability to appeal to hedonists and revolutionaries alike, combined with charismatic star power and unapologetic threat, made 2Pac one of the most fascinating and successful rappers of the '90s.",
+  },
+  {
+    id: 25,
+    name: 'Ice Cube',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141481/spotify-clone/artists/hw0yyjf0gcs98ctarjj9.webp',
+    monthlyListeners: 15668503,
+    description:
+      'Ice Cube is one of the most crucial artists in rap history. A razor-sharp lyricist, alternately furious and humorous MC, and accomplished producer, Cube laid the foundation for the legacy of pioneering gangsta rap group  by writing "Boyz-N-the-Hood" for partner  and making his first big splash as an MC with the subsequent "Dope Man".',
+  },
+  {
+    id: 26,
+    name: 'Snoop Dogg',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141492/spotify-clone/artists/tp5cs4c0g1ei9ynier6a.webp',
+    monthlyListeners: 29367742,
+    description:
+      "One of the most iconic figures to emerge from the early-'90s G-funk era, Snoop Dogg evolved beyond his gangsta rap beginnings to become a lovable pop culture fixture with forays into television, movies, football coaching, and wrestling while expanding his musical reach far beyond his primary genre. ",
+  },
+  {
+    id: 27,
+    name: 'Avicii',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709143016/spotify-clone/artists/ga1hjmexm0bymsppp1zt.webp',
+    monthlyListeners: 37891804,
+    description:
+      'With his melodic songs and inspirational lyrics Swedish house producer Avicii was one of the defining artists of modern pop. The genre-bending tracks captivated audiences worldwide and are widely considered the soundtrack of a generation.',
+  },
+  {
+    id: 28,
+    name: 'David Guetta',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709143048/spotify-clone/artists/kkvdbn21a7eqovamjrnl.webp',
+    monthlyListeners: 71226736,
+    description:
+      'DJ. Producer. Artist. David Guetta is a musical trailblazer and an international icon. With 2x Grammys awards, 11x Grammy nominations, 7x UK number 1 singles, over 40 billion global streams, 50 million records sold worldwide, and is currently the 4th most streamed artist on Spotify with over 75 million monthly global followers.',
+  },
+  {
+    id: 29,
+    name: 'Calvin Harris',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709143036/spotify-clone/artists/gr9pdkcpcm5qjxxxjkuz.webp',
+    monthlyListeners: 63260921,
+    description:
+      "Producer, DJ and songwriter Calvin Harris stands as the figurehead for modern dance music, having broken world records and dominated the charts. He has over 35 billion combined audio and video streams in his career history, making him one of the most viewed artists on YouTube and one of Sony Music's biggest streaming artists.",
+  },
+  {
+    id: 30,
+    name: 'LoFi Dreamer',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709209533/spotify-clone/artists/pacqsxwxeduyywbsqwlx.webp',
+    monthlyListeners: 625713,
+    description:
+      'LoFi Dreamer is a modern lofi / chillhop music producer heavily inspired by Japanese and Chinese culture as well as their instruments',
+  },
+  {
+    id: 31,
+    name: 'Tenno',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709208959/spotify-clone/artists/eqn6ee8r8l3bphoh3res.webp',
+    monthlyListeners: 634295,
+    description:
+      'Egor Tuchin aka Tenno is originally from Russia, Tyumen. But is currently based in Hungary. He\'s been producing music as Tenno since April 2019. Before that he\'s had different projects which were more focused on Drum & Bass and Melodic Dubstep / Chillstep genres. He now mostly makes chill music inspired by Japanese and Chinese cultures. His track "Journey" was the first where he incorporated Asian instruments and it helped him shape his sound.',
+  },
+  {
+    id: 32,
+    name: 'Urban Nocturne',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709209420/spotify-clone/artists/sdls5egphqpvnh3f1sij.webp',
+    monthlyListeners: 585145,
+    description:
+      'Urban Nocturne is a modern lofi / chillhop music producer heavily inspired by Japanese and Chinese culture as well as their instruments.',
   },
 ];
 
@@ -502,5 +665,817 @@ export const songs: Song[] = [
     durationInSeconds: 196,
     audio:
       'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997747/spotify-clone/audios/p4ulb9eoxaidy4vy3y24.mp3',
+  },
+  {
+    id: 17,
+    playlistId: 3,
+    title: 'yes, and?',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709127939/spotify-clone/songs/szusxqbkqr5lmsk1zp7l.webp',
+    creator: artists[14],
+    artists: ['Ariana Grande'],
+    album: 'yes, and?',
+    duration: '3:35',
+    durationInSeconds: 215,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138107/spotify-clone/audios/yok4km5le6f48vg871af.mp3',
+  },
+  {
+    id: 18,
+    playlistId: 3,
+    title: 'Cruel Summer',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128781/spotify-clone/songs/hp2tesncplirm51dztjz.webp',
+    creator: artists[15],
+    artists: ['Taylor Swift'],
+    album: 'Lover',
+    duration: '2:59',
+    durationInSeconds: 179,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138296/spotify-clone/audios/wkgfgqblyvzsyxwnpdez.mp3',
+  },
+  {
+    id: 19,
+    playlistId: 3,
+    title: 'What Was I Made For?',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128759/spotify-clone/songs/vqxmh6bqnrbkmkrsjdjm.webp',
+    creator: artists[16],
+    artists: ['Billie Eilish'],
+    album: 'What Was I Made For?',
+    duration: '3:42',
+    durationInSeconds: 222,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138147/spotify-clone/audios/mgh2vzroawcjn3n7udoy.mp3',
+  },
+  {
+    id: 20,
+    playlistId: 3,
+    title: 'Love On',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128738/spotify-clone/songs/dymjstxrpwkuthdac1jy.webp',
+    creator: artists[17],
+    artists: ['Selena Gomez'],
+    album: 'Love On',
+    duration: '3:10',
+    durationInSeconds: 190,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138245/spotify-clone/audios/gqle3jdaspwzu8vnsyqi.mp3',
+  },
+  {
+    id: 22,
+    playlistId: 3,
+    title: 'Flowers',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128710/spotify-clone/songs/j5wdf4nkiulqqx5kpvq2.webp',
+    creator: artists[18],
+    artists: ['Miley Cyrus'],
+    album: 'Endless Summer Vacation',
+    duration: '3:21',
+    durationInSeconds: 201,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138217/spotify-clone/audios/rxnifk8vv9vjqnyqhmnq.mp3',
+  },
+  {
+    id: 23,
+    playlistId: 3,
+    title: "There's Nothing Holdin' Me Back",
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128722/spotify-clone/songs/silccuabdvymqkxsqdts.webp',
+    creator: artists[19],
+    artists: ['Shawn Mendes'],
+    album: 'Illuminate',
+    duration: '3:25',
+    durationInSeconds: 205,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138274/spotify-clone/audios/ddpjfe4nv9ahrfqebcmg.mp3',
+  },
+  {
+    id: 24,
+    playlistId: 3,
+    title: 'Houdini',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141936/spotify-clone/songs/vpmeugih02jtul06hvxk.webp',
+    creator: artists[20],
+    artists: ['Dua Lipa'],
+    album: 'Houdini',
+    duration: '3:08',
+    durationInSeconds: 188,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709141967/spotify-clone/audios/krnukoyqdjz0cxlbkdas.mp3',
+  },
+  {
+    id: 25,
+    playlistId: 4,
+    title: 'In Da Club',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140548/spotify-clone/songs/xxbuu8jenricegdlw8sf.webp',
+    creator: artists[21],
+    artists: ['50 Cent'],
+    album: "Get Rich Or Die Tryin'",
+    duration: '3:14',
+    durationInSeconds: 194,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140816/spotify-clone/audios/ufw3rbxecit4uti0md36.mp3',
+  },
+  {
+    id: 26,
+    playlistId: 4,
+    title: 'Lose Yourself',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140563/spotify-clone/songs/u6gccb93ibn5itlemkxx.webp',
+    creator: artists[22],
+    artists: ['Eminem'],
+    album: 'Curtain Call',
+    duration: '5:20',
+    durationInSeconds: 320,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140845/spotify-clone/audios/vtdshyym6vok5757imdc.mp3',
+  },
+  {
+    id: 27,
+    playlistId: 4,
+    title: 'All Eyez On Me',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140577/spotify-clone/songs/lamqbqy74suwx9mmgit3.webp',
+    creator: artists[23],
+    artists: ['2Pac'],
+    album: 'All Eyez On Me',
+    duration: '5:07',
+    durationInSeconds: 307,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140762/spotify-clone/audios/lfboszmuaq9dblaynpu4.mp3',
+  },
+  {
+    id: 28,
+    playlistId: 4,
+    title: 'It Was A Good Day',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140589/spotify-clone/songs/ldarbbjmfcpyhxyswmst.webp',
+    creator: artists[24],
+    artists: ['Ice Cube'],
+    album: 'The Predator',
+    duration: '4:26',
+    durationInSeconds: 266,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140790/spotify-clone/audios/miip04hlsf6modtxgnq9.mp3',
+  },
+  {
+    id: 29,
+    playlistId: 4,
+    title: 'Mockingbird',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140563/spotify-clone/songs/u6gccb93ibn5itlemkxx.webp',
+    creator: artists[22],
+    artists: ['Eminem'],
+    album: 'Curtain Call',
+    duration: '4:17',
+    durationInSeconds: 257,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140866/spotify-clone/audios/rpp9ep8rcvxi3cqg1eza.mp3',
+  },
+  {
+    id: 30,
+    playlistId: 4,
+    title: 'Gin And Juice',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140601/spotify-clone/songs/iwjju83hyxq3rmkntqlv.webp',
+    creator: artists[25],
+    artists: ['Snoop Dogg', 'Daz Dillinger'],
+    album: 'Doggystyle',
+    duration: '3:31',
+    durationInSeconds: 211,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140894/spotify-clone/audios/tj4jgfcc0ybim3rftei3.mp3',
+  },
+  {
+    id: 31,
+    playlistId: 5,
+    title: 'Hey Brother',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142354/spotify-clone/songs/mnrbsdluqrwulhc4qkme.webp',
+    creator: artists[26],
+    artists: ['Avicii'],
+    album: 'True',
+    duration: '4:23',
+    durationInSeconds: 263,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142492/spotify-clone/audios/w9dseapib2ycc8dq4nef.mp3',
+  },
+  {
+    id: 32,
+    playlistId: 5,
+    title: "I'm Good",
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142370/spotify-clone/songs/zcpn79qfxcyed7g7b4fk.webp',
+    creator: artists[27],
+    artists: ['David Guetta', 'Bebe Rexha'],
+    album: "I'm good (Blue)",
+    duration: '2:57',
+    durationInSeconds: 177,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142638/spotify-clone/audios/nlu9aogmwxjimtur9zw4.mp3',
+  },
+  {
+    id: 33,
+    playlistId: 5,
+    title: 'Wake Me Up',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142354/spotify-clone/songs/mnrbsdluqrwulhc4qkme.webp',
+    creator: artists[26],
+    artists: ['Avicii'],
+    album: 'True',
+    duration: '4:11',
+    durationInSeconds: 251,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142514/spotify-clone/audios/kjd2z22jhutr0jtt0gho.mp3',
+  },
+  {
+    id: 34,
+    playlistId: 5,
+    title: 'Feel So Close',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142380/spotify-clone/songs/catc6o1a4lqxm0pxywpu.webp',
+    creator: artists[28],
+    artists: ['Calvin Harris'],
+    album: '18 Months',
+    duration: '3:27',
+    durationInSeconds: 207,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142536/spotify-clone/audios/l60hva3miuokvez1yfzb.mp3',
+  },
+  {
+    id: 35,
+    playlistId: 5,
+    title: 'Outside',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142391/spotify-clone/songs/knoiotxqai3ik1xlrm6g.webp',
+    creator: artists[28],
+    artists: ['Calvin Harris', 'Ellie Goulding'],
+    album: 'Motion',
+    duration: '3:46',
+    durationInSeconds: 226,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142605/spotify-clone/audios/pho6b5miihssk4o2pe2a.mp3',
+  },
+  {
+    id: 36,
+    playlistId: 6,
+    title: 'Moonlit Walk',
+    image: 'https://f4.bcbits.com/img/a1435058381_65.jpg',
+    creator: artists[29],
+    artists: ['LoFi Dreamer'],
+    album: 'Chill Lo-Fi Music',
+    duration: '2:57',
+    durationInSeconds: 177,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208349/spotify-clone/audios/vxcywwl3eaqzhlh0wd8v.mp3',
+  },
+  {
+    id: 37,
+    playlistId: 6,
+    title: 'Coffee Daze',
+    image: 'https://f4.bcbits.com/img/a1435058381_65.jpg',
+    creator: artists[29],
+    artists: ['LoFi Dreamer'],
+    album: 'Chill Lo-Fi Music',
+    duration: '3:40',
+    durationInSeconds: 220,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208388/spotify-clone/audios/rihyexmtqgcefw61gfm9.mp3',
+  },
+  {
+    id: 38,
+    playlistId: 6,
+    title: 'Lunar',
+    image: 'https://f4.bcbits.com/img/a1962013209_16.jpg',
+    creator: artists[30],
+    artists: ['Tenno'],
+    album: 'Study Session',
+    duration: '3:06',
+    durationInSeconds: 186,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208460/spotify-clone/audios/kn13knsxfego07yrqan3.mp3',
+  },
+  {
+    id: 39,
+    playlistId: 6,
+    title: 'Go go go!',
+    image: 'https://f4.bcbits.com/img/a1962013209_16.jpg',
+    creator: artists[30],
+    artists: ['Tenno'],
+    album: 'Study Session',
+    duration: '1:30',
+    durationInSeconds: 90,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208494/spotify-clone/audios/kuxiqtoyuu9hh8utklpj.mp3',
+  },
+  {
+    id: 40,
+    playlistId: 6,
+    title: 'Lost Pages',
+    image:
+      'https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187',
+    creator: artists[31],
+    artists: ['Urban Nocturne'],
+    album: 'Midnight Tales',
+    duration: '2:40',
+    durationInSeconds: 160,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208533/spotify-clone/audios/kdt2wlhaev74qk8xa3sz.mp3',
+  },
+  {
+    id: 41,
+    playlistId: 6,
+    title: 'Silent Rain',
+    image:
+      'https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187',
+    creator: artists[31],
+    artists: ['Urban Nocturne'],
+    album: 'Midnight Tales',
+    duration: '2:38',
+    durationInSeconds: 158,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208574/spotify-clone/audios/xdz5js2hr1qxxddqbvlk.mp3',
+  },
+
+  {
+    id: 42,
+    playlistId: 7,
+    title: 'Coffee Daze',
+    image: 'https://f4.bcbits.com/img/a1435058381_65.jpg',
+    creator: artists[29],
+    artists: ['LoFi Dreamer'],
+    album: 'Chill Lo-Fi Music',
+    duration: '3:40',
+    durationInSeconds: 220,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208388/spotify-clone/audios/rihyexmtqgcefw61gfm9.mp3',
+  },
+  {
+    id: 43,
+    playlistId: 7,
+    title: 'Lost Pages',
+    image:
+      'https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187',
+    creator: artists[31],
+    artists: ['Urban Nocturne'],
+    album: 'Midnight Tales',
+    duration: '2:40',
+    durationInSeconds: 160,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709208533/spotify-clone/audios/kdt2wlhaev74qk8xa3sz.mp3',
+  },
+  {
+    id: 44,
+    playlistId: 7,
+    title: 'PERREO NEGRO',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707240873/spotify-clone/songs/ftnxttvw8wx8tyi4qfav.webp',
+    creator: artists[9],
+    artists: ['Bad Bunny', 'Feid'],
+    album: 'nadie sabe lo que va a pasar mañana',
+    duration: '2:42',
+    durationInSeconds: 162,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997641/spotify-clone/audios/gvxdiv91gmsusvxwhyfz.mp3',
+  },
+  {
+    id: 45,
+    playlistId: 7,
+    title: 'Dream On',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221136/spotify-clone/songs/d86jnm7odfnoglvqtdii.webp',
+    creator: artists[3],
+    artists: ['Aerosmith'],
+    album: 'Aerosmith',
+    duration: '4:28',
+    durationInSeconds: 268,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997396/spotify-clone/audios/w656irqzwktb4zzikvao.mp3',
+  },
+  {
+    id: 46,
+    playlistId: 7,
+    title: 'Houdini',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141936/spotify-clone/songs/vpmeugih02jtul06hvxk.webp',
+    creator: artists[20],
+    artists: ['Dua Lipa'],
+    album: 'Houdini',
+    duration: '3:08',
+    durationInSeconds: 188,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709141967/spotify-clone/audios/krnukoyqdjz0cxlbkdas.mp3',
+  },
+  {
+    id: 47,
+    playlistId: 7,
+    title: 'Mockingbird',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140563/spotify-clone/songs/u6gccb93ibn5itlemkxx.webp',
+    creator: artists[22],
+    artists: ['Eminem'],
+    album: 'Curtain Call',
+    duration: '4:17',
+    durationInSeconds: 257,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140866/spotify-clone/audios/rpp9ep8rcvxi3cqg1eza.mp3',
+  },
+  {
+    id: 48,
+    playlistId: 7,
+    title: 'Cruel Summer',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128781/spotify-clone/songs/hp2tesncplirm51dztjz.webp',
+    creator: artists[15],
+    artists: ['Taylor Swift'],
+    album: 'Lover',
+    duration: '2:59',
+    durationInSeconds: 179,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138296/spotify-clone/audios/wkgfgqblyvzsyxwnpdez.mp3',
+  },
+  {
+    id: 49,
+    playlistId: 7,
+    title: 'Enter Sandman',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221502/spotify-clone/songs/m3kwrqhspqtaixwhydtk.webp',
+    creator: artists[7],
+    artists: ['Metallica'],
+    album: 'Metallica',
+    duration: '5:31',
+    durationInSeconds: 331,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997529/spotify-clone/audios/h8qbsromtjtdfrexqby5.mp3',
+  },
+  {
+    id: 50,
+    playlistId: 7,
+    title: 'QLONA',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707241096/spotify-clone/songs/idfzssclqy8lyuj5aqwj.webp',
+    creator: artists[11],
+    artists: ['Karol G', 'Peso Pluma'],
+    album: 'MAÑANA SERÁ BONITO',
+    duration: '2:52',
+    durationInSeconds: 172,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997686/spotify-clone/audios/hwdxjfsaii9ck1mcas9u.mp3',
+  },
+  {
+    id: 51,
+    playlistId: 7,
+    title: 'Lose Yourself',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140563/spotify-clone/songs/u6gccb93ibn5itlemkxx.webp',
+    creator: artists[22],
+    artists: ['Eminem'],
+    album: 'Curtain Call',
+    duration: '5:20',
+    durationInSeconds: 320,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140845/spotify-clone/audios/vtdshyym6vok5757imdc.mp3',
+  },
+  {
+    id: 52,
+    playlistId: 8,
+    title: 'Runaway',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707220841/spotify-clone/songs/txgl3slvmqgbsgakjfkb.webp',
+    creator: artists[0],
+    artists: ['Bon Jovi'],
+    album: 'Bon Jovi',
+    duration: '3:52',
+    durationInSeconds: 232,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707935054/spotify-clone/audios/pdj6fhasdlb2l6zxfsjh.mp3',
+  },
+  {
+    id: 53,
+    playlistId: 8,
+    title: 'Dream On',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221136/spotify-clone/songs/d86jnm7odfnoglvqtdii.webp',
+    creator: artists[3],
+    artists: ['Aerosmith'],
+    album: 'Aerosmith',
+    duration: '4:28',
+    durationInSeconds: 268,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997396/spotify-clone/audios/w656irqzwktb4zzikvao.mp3',
+  },
+  {
+    id: 54,
+    playlistId: 8,
+    title: 'Californication',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221239/spotify-clone/songs/o1kpplxbgjn8nmwwpnzb.webp',
+    creator: artists[4],
+    artists: ['Red Hot Chilli Peppers'],
+    album: 'Californication',
+    duration: '5:21',
+    durationInSeconds: 321,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997443/spotify-clone/audios/wrjlipcn30naqg5wzhin.mp3',
+  },
+  {
+    id: 55,
+    playlistId: 8,
+    title: 'Come As You Are',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221308/spotify-clone/songs/dbtifmdsaciwnrarw9n4.webp',
+    creator: artists[5],
+    artists: ['Nirvana'],
+    album: 'Nevermind',
+    duration: '3:44',
+    durationInSeconds: 224,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997470/spotify-clone/audios/r3tccgbgd5yexktcvg9p.mp3',
+  },
+  {
+    id: 56,
+    playlistId: 8,
+    title: "Livin' On A Prayer",
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221561/spotify-clone/songs/mvzomfdibazjxumfl7od.webp',
+    creator: artists[0],
+    artists: ['Bon Jovi'],
+    album: 'Slippery When Wet',
+    duration: '4:08',
+    durationInSeconds: 248,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997576/spotify-clone/audios/iuhzyposbivge47ujyxm.mp3',
+  },
+  {
+    id: 57,
+    playlistId: 8,
+    title: 'Bohemian Rhapsody',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1707221036/spotify-clone/songs/dgxyyi8isxkqsajfyrzo.webp',
+    creator: artists[2],
+    artists: ['Queen'],
+    album: 'A Night At The Opera',
+    duration: '5:59',
+    durationInSeconds: 359,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1707997343/spotify-clone/audios/eoovcleuxmw9lerqd5pn.mp3',
+  },
+
+  {
+    id: 58,
+    playlistId: 9,
+    title: "I'm Good",
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142370/spotify-clone/songs/zcpn79qfxcyed7g7b4fk.webp',
+    creator: artists[27],
+    artists: ['David Guetta', 'Bebe Rexha'],
+    album: "I'm good (Blue)",
+    duration: '2:57',
+    durationInSeconds: 177,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142638/spotify-clone/audios/nlu9aogmwxjimtur9zw4.mp3',
+  },
+  {
+    id: 59,
+    playlistId: 9,
+    title: 'Feel So Close',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142380/spotify-clone/songs/catc6o1a4lqxm0pxywpu.webp',
+    creator: artists[28],
+    artists: ['Calvin Harris'],
+    album: '18 Months',
+    duration: '3:27',
+    durationInSeconds: 207,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142536/spotify-clone/audios/l60hva3miuokvez1yfzb.mp3',
+  },
+  {
+    id: 60,
+    playlistId: 9,
+    title: 'Wake Me Up',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142354/spotify-clone/songs/mnrbsdluqrwulhc4qkme.webp',
+    creator: artists[26],
+    artists: ['Avicii'],
+    album: 'True',
+    duration: '4:11',
+    durationInSeconds: 251,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142514/spotify-clone/audios/kjd2z22jhutr0jtt0gho.mp3',
+  },
+  {
+    id: 61,
+    playlistId: 9,
+    title: 'Outside',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142391/spotify-clone/songs/knoiotxqai3ik1xlrm6g.webp',
+    creator: artists[28],
+    artists: ['Calvin Harris', 'Ellie Goulding'],
+    album: 'Motion',
+    duration: '3:46',
+    durationInSeconds: 226,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142605/spotify-clone/audios/pho6b5miihssk4o2pe2a.mp3',
+  },
+  {
+    id: 62,
+    playlistId: 9,
+    title: 'Hey Brother',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709142354/spotify-clone/songs/mnrbsdluqrwulhc4qkme.webp',
+    creator: artists[26],
+    artists: ['Avicii'],
+    album: 'True',
+    duration: '4:23',
+    durationInSeconds: 263,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709142492/spotify-clone/audios/w9dseapib2ycc8dq4nef.mp3',
+  },
+
+  {
+    id: 63,
+    playlistId: 10,
+    title: 'yes, and?',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709127939/spotify-clone/songs/szusxqbkqr5lmsk1zp7l.webp',
+    creator: artists[14],
+    artists: ['Ariana Grande'],
+    album: 'yes, and?',
+    duration: '3:35',
+    durationInSeconds: 215,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138107/spotify-clone/audios/yok4km5le6f48vg871af.mp3',
+  },
+  {
+    id: 64,
+    playlistId: 10,
+    title: 'Houdini',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709141936/spotify-clone/songs/vpmeugih02jtul06hvxk.webp',
+    creator: artists[20],
+    artists: ['Dua Lipa'],
+    album: 'Houdini',
+    duration: '3:08',
+    durationInSeconds: 188,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709141967/spotify-clone/audios/krnukoyqdjz0cxlbkdas.mp3',
+  },
+  {
+    id: 65,
+    playlistId: 10,
+    title: 'What Was I Made For?',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128759/spotify-clone/songs/vqxmh6bqnrbkmkrsjdjm.webp',
+    creator: artists[16],
+    artists: ['Billie Eilish'],
+    album: 'What Was I Made For?',
+    duration: '3:42',
+    durationInSeconds: 222,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138147/spotify-clone/audios/mgh2vzroawcjn3n7udoy.mp3',
+  },
+  {
+    id: 66,
+    playlistId: 10,
+    title: 'Cruel Summer',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128781/spotify-clone/songs/hp2tesncplirm51dztjz.webp',
+    creator: artists[15],
+    artists: ['Taylor Swift'],
+    album: 'Lover',
+    duration: '2:59',
+    durationInSeconds: 179,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138296/spotify-clone/audios/wkgfgqblyvzsyxwnpdez.mp3',
+  },
+  {
+    id: 67,
+    playlistId: 10,
+    title: 'Flowers',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128710/spotify-clone/songs/j5wdf4nkiulqqx5kpvq2.webp',
+    creator: artists[18],
+    artists: ['Miley Cyrus'],
+    album: 'Endless Summer Vacation',
+    duration: '3:21',
+    durationInSeconds: 201,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138217/spotify-clone/audios/rxnifk8vv9vjqnyqhmnq.mp3',
+  },
+  {
+    id: 68,
+    playlistId: 10,
+    title: "There's Nothing Holdin' Me Back",
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128722/spotify-clone/songs/silccuabdvymqkxsqdts.webp',
+    creator: artists[19],
+    artists: ['Shawn Mendes'],
+    album: 'Illuminate',
+    duration: '3:25',
+    durationInSeconds: 205,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138274/spotify-clone/audios/ddpjfe4nv9ahrfqebcmg.mp3',
+  },
+  {
+    id: 69,
+    playlistId: 10,
+    title: 'Love On',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709128738/spotify-clone/songs/dymjstxrpwkuthdac1jy.webp',
+    creator: artists[17],
+    artists: ['Selena Gomez'],
+    album: 'Love On',
+    duration: '3:10',
+    durationInSeconds: 190,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709138245/spotify-clone/audios/gqle3jdaspwzu8vnsyqi.mp3',
+  },
+
+  {
+    id: 70,
+    playlistId: 11,
+    title: 'Lose Yourself',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140563/spotify-clone/songs/u6gccb93ibn5itlemkxx.webp',
+    creator: artists[22],
+    artists: ['Eminem'],
+    album: 'Curtain Call',
+    duration: '5:20',
+    durationInSeconds: 320,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140845/spotify-clone/audios/vtdshyym6vok5757imdc.mp3',
+  },
+  {
+    id: 71,
+    playlistId: 11,
+    title: 'All Eyez On Me',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140577/spotify-clone/songs/lamqbqy74suwx9mmgit3.webp',
+    creator: artists[23],
+    artists: ['2Pac'],
+    album: 'All Eyez On Me',
+    duration: '5:07',
+    durationInSeconds: 307,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140762/spotify-clone/audios/lfboszmuaq9dblaynpu4.mp3',
+  },
+  {
+    id: 72,
+    playlistId: 11,
+    title: 'Gin And Juice',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140601/spotify-clone/songs/iwjju83hyxq3rmkntqlv.webp',
+    creator: artists[25],
+    artists: ['Snoop Dogg', 'Daz Dillinger'],
+    album: 'Doggystyle',
+    duration: '3:31',
+    durationInSeconds: 211,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140894/spotify-clone/audios/tj4jgfcc0ybim3rftei3.mp3',
+  },
+  {
+    id: 73,
+    playlistId: 11,
+    title: 'In Da Club',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140548/spotify-clone/songs/xxbuu8jenricegdlw8sf.webp',
+    creator: artists[21],
+    artists: ['50 Cent'],
+    album: "Get Rich Or Die Tryin'",
+    duration: '3:14',
+    durationInSeconds: 194,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140816/spotify-clone/audios/ufw3rbxecit4uti0md36.mp3',
+  },
+
+  {
+    id: 74,
+    playlistId: 11,
+    title: 'Mockingbird',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140563/spotify-clone/songs/u6gccb93ibn5itlemkxx.webp',
+    creator: artists[22],
+    artists: ['Eminem'],
+    album: 'Curtain Call',
+    duration: '4:17',
+    durationInSeconds: 257,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140866/spotify-clone/audios/rpp9ep8rcvxi3cqg1eza.mp3',
+  },
+  {
+    id: 75,
+    playlistId: 11,
+    title: 'It Was A Good Day',
+    image:
+      'https://res.cloudinary.com/dtozxzg7o/image/upload/v1709140589/spotify-clone/songs/ldarbbjmfcpyhxyswmst.webp',
+    creator: artists[24],
+    artists: ['Ice Cube'],
+    album: 'The Predator',
+    duration: '4:26',
+    durationInSeconds: 266,
+    audio:
+      'https://res.cloudinary.com/dtozxzg7o/video/upload/v1709140790/spotify-clone/audios/miip04hlsf6modtxgnq9.mp3',
   },
 ];
